@@ -1,0 +1,26 @@
+body {
+  background-image:
+  linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(85, 85, 156, 0.459)),
+  url('/img/foto-livro.webp');
+}
+
+form {
+  width: 500px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+form input {
+  margin-bottom: 5px;
+}
+
+form input[type="button"] {
+  margin-right: 10px;
+}
+
+.loja{
+  border-bottom : solid 5px;
+  text-align: center;
+  font-style: italic;
+  color: rgb(0, 0, 49);
+}

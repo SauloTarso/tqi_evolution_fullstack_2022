@@ -20,26 +20,26 @@ import com.api.backend.services.ProdutoServico;
 public class CompraControle {
     
     @Autowired
-    private ProdutoServico ps;
+    private ProdutoServico produtoServico;
 
     @DeleteMapping("/compras/remover/{id}")
     public ResponseEntity<RespostaModelo> remover(@PathVariable long id){
-        return ps.remover(id);
+        return produtoServico.remover(id);
     }
 
     @PutMapping("/compras/alterar")
-    public ResponseEntity<?> alterar(@RequestBody ProdutoModelo pm){
-        return ps.cadastrarAlterar(pm, "alterar");
+    public ResponseEntity<?> alterar(@RequestBody ProdutoModelo produtoModelo){
+        return produtoServico.cadastrarAlterar(produtoModelo, "alterar");
     }
 
     @PostMapping("/compras/cadastrar")
-    public ResponseEntity<?> cadastrar(@RequestBody ProdutoModelo pm){
-        return ps.cadastrarAlterar(pm, "cadastrar");
+    public ResponseEntity<?> cadastrar(@RequestBody ProdutoModelo produtoModelo){
+        return produtoServico.cadastrarAlterar(produtoModelo, "cadastrar");
     }
 
     @GetMapping("/compras/listar")
     public Iterable<ProdutoModelo> listar(){
-        return ps.listar();
+        return produtoServico.listar();
     }
     
     @GetMapping("/compras")
